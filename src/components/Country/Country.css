@@ -1,0 +1,43 @@
+.countrySection {
+    height: 250px;
+    padding: 30px 50px;
+    border: 4px solid rgb(230, 230, 230);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.flag {
+    text-align: center;
+    width: 40%;
+    border-right: 2px solid lightgrey;
+}
+
+.flagImage {
+    height: 150px;
+    max-width: 300px;
+}
+
+.detailSection {
+    width: 30%;
+    padding-left: 40px;
+}
+
+.inlineP {
+    display: inline;
+}
+
+.addBtn {
+    background-color: #505b70;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.addBtn:hover {
+    background-color: #445064;
+}
