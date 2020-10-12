@@ -4,9 +4,8 @@ import './Country.css';
 const Country = (props) => {
     const [money, setMoney] = useState([]);
     const [speech, setSpeech] = useState([]);
-    const {name, population, flag, region, capital, currencies, languages} = props.country;
+    const {name, population, flag, region, capital, currencies, languages, area} = props.country;
     const handleAddFavorites = props.handleAddFavorites;
-    // console.log(languages);
 
     useEffect(()=> {
         const note = currencies.map(currency=> {
@@ -18,8 +17,11 @@ const Country = (props) => {
         });
         setMoney(note);
 
-        languages.map(language=> setSpeech([...speech, language]));
-
+        const lang = languages.map(language=> {
+            // console.log(language.name);
+            return([...speech, language.name]);
+        });
+        setSpeech(lang);
     }, [])
 
 
@@ -42,15 +44,15 @@ const Country = (props) => {
                 <br/> <br/>
 
                 <p className='inlineP'>Languages: </p>
-                {/* {
+                {
                     speech.length === 1 ? speech.map(sp => <p className='inlineP'>{sp}</p>)
                     : speech.map(sp => <p className='inlineP'>{sp} , </p>)
-                } */}
+                }
                 
                 
-                {/*
-                <p>Languages: {languages}</p>
-                <p>Timezones: {timezones}</p> */}
+                
+                <p>Area: {area} square Km</p>
+                {/* <p>Timezones: {timezones}</p> */}
             </div>
 
             <div>

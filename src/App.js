@@ -10,7 +10,7 @@ function App() {
   const [searchResult, setSearchResult] = useState([]);
 
   const handleSearchChange = value => {
-    setSearchTerm(value);
+    setSearchTerm(value.toLowerCase());
   };
 
   const handleAddFavorites = (name) => {
@@ -29,7 +29,6 @@ function App() {
       country.name.toLowerCase().includes(searchTerm)
     );
     setSearchResult(results);
-    console.log(searchResult);
   }, [searchTerm]);
 
 
